@@ -7,4 +7,30 @@ spec:
   owner: user:guest
   lifecycle: experimental
   providesApis:
-    - application-analysis
+    - mta-application-analysis
+
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: mta-application-analysis
+  description: Perform an MTA analisys for an application
+spec:
+  type: openapi
+  lifecycle: experimental
+  owner: user:guest
+  system: something
+  definition: |
+    openapi: "3.0.0"
+    info:
+      version: 1.0.0
+      title: MTA Application Analysis workflow
+      license:
+        name: MIT
+    servers:
+      - url: http://example.org/v1/MTAAnalysis
+    paths:
+      /:
+        post:
+          summary: invoke the workflow
