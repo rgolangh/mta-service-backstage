@@ -2,12 +2,18 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: "mta-service-backstage"
+  annotations:
+    - janus-idp.io/workflows/id: bar
+    - janus-idp.io/tekton-enabled : 'true'
+    - janus-idp.io/workflows-enabled : 'true'
+    
 spec:
   type: service
   owner: user:guest
   lifecycle: experimental
   providesApis:
     - mta-application-analysis
+
 
 
 ---
