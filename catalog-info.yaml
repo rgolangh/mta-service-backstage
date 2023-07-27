@@ -27,7 +27,7 @@ metadata:
     - janus-idp.io/workflows-enabled : 'true'
     
 spec:
-  type: workflow
+  type: service
   owner: user:guest
   lifecycle: experimental
   providesApis:
