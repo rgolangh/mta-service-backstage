@@ -14,13 +14,28 @@ spec:
   providesApis:
     - mta-application-analysis
 
-
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "Migrate Workloads to Kubernetes (move2kube)"
+  annotations:
+    - janus-idp.io/workflows/id: bar
+    - janus-idp.io/tekton-enabled : 'true'
+    - janus-idp.io/workflows-enabled : 'true'
+    
+spec:
+  type: workflow
+  owner: user:guest
+  lifecycle: experimental
+  providesApis:
+    - move2kube
 
 ---
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
-  name: mta-application-analysis
+  name: move2kube
   description: Perform an MTA analisys for an application
 spec:
   type: openapi
@@ -31,11 +46,11 @@ spec:
     openapi: "3.0.0"
     info:
       version: 1.0.0
-      title: MTA Application Analysis workflow
+      title: Move 2 Kube
       license:
         name: MIT
     servers:
-      - url: http://example.org/v1/MTAAnalysis
+      - url: http://example.org/v1/move2kube
     paths:
       /:
         post:
