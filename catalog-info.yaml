@@ -2,6 +2,49 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 # Example:
 metadata:
+  name: mta-service-backstage
+  annotations:
+    backstage.io/managed-by-location: url:http://github.com/backstage/backstage/blob/master/catalog-info.yaml
+    janus-idp/tekton-enabled: true
+    
+spec:
+  type: workflow
+  owner: user:guest
+  lifecycle: experimental
+  providesApis:
+    - mta
+
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: mta
+  description: Perform an MTA analisys for an application
+spec:
+  type: openapi
+  lifecycle: experimental
+  owner: user:guest
+  system: something
+  definition: |
+    openapi: "3.0.0"
+    info:
+      version: 1.0.0
+      title: MTA analysis
+      license:
+        name: MIT
+    servers:
+      - url: http://example.org/v1/mtaanalysis
+    paths:
+      /:
+        post:
+          summary: invoke the workflow
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+# Example:
+metadata:
   name: move2kube-service-backstage
   annotations:
     backstage.io/managed-by-location: url:http://github.com/backstage/backstage/blob/master/catalog-info.yaml
@@ -20,7 +63,7 @@ apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
   name: move2kube
-  description: Perform an MTA analisys for an application
+  description: Perform a migration of a project to kubernetes
 spec:
   type: openapi
   lifecycle: experimental
