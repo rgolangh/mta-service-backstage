@@ -2,12 +2,13 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 # Example:
 metadata:
-  name: mta-service-backstage
+  name: move2kube-service-backstage
   annotations:
     backstage.io/managed-by-location: url:http://github.com/backstage/backstage/blob/master/catalog-info.yaml
+    janus-idp/tekton-enabled: true
     
 spec:
-  type: service
+  type: workflow
   owner: user:guest
   lifecycle: experimental
   providesApis:
