@@ -5,7 +5,7 @@ metadata:
   name: mta-service-backstage
   annotations:
     backstage.io/managed-by-location: url:http://github.com/backstage/backstage/blob/master/catalog-info.yaml
-    janus-idp/tekton-enabled: true
+    janus-idp/tekton-enabled: "true"
     
 spec:
   type: workflow
@@ -48,7 +48,7 @@ metadata:
   name: move2kube-service-backstage
   annotations:
     backstage.io/managed-by-location: url:http://github.com/backstage/backstage/blob/master/catalog-info.yaml
-    janus-idp/tekton-enabled: true
+    janus-idp/tekton-enabled: "true"
     
 spec:
   type: workflow
