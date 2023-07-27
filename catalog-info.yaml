@@ -3,7 +3,7 @@ kind: Component
 metadata:
   name: "mta-service-backstage"
   annotations:
-    - backstage.io/managed-by-location: https://github.com/rgolangh/mta-service-backstage/edit/master/catalog-info.yaml
+    - backstage.io/managed-by-location: url:https://github.com/janus-idp/backstage-showcase/tree/main/catalog-entities/components/showcase.yaml
     - janus-idp.io/workflows/id: bar
     - janus-idp.io/tekton-enabled : 'true'
     - janus-idp.io/workflows-enabled : 'true'
@@ -21,7 +21,7 @@ kind: Component
 metadata:
   name: "Migrate Workloads to Kubernetes (move2kube)"
   annotations:
-    - backstage.io/managed-by-location: https://github.com/rgolangh/mta-service-backstage/edit/master/catalog-info.yaml
+    - backstage.io/managed-by-location: url:https://github.com/janus-idp/backstage-showcase/tree/main/catalog-entities/components/showcase.yaml
     - janus-idp.io/workflows/id: bar
     - janus-idp.io/tekton-enabled : 'true'
     - janus-idp.io/workflows-enabled : 'true'
