@@ -13,7 +13,7 @@ spec:
   owner: user:guest
   lifecycle: experimental
   providesApis:
-    - mta-application-analysis
+    - move2kube
 
 
 ---
