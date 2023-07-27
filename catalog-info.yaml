@@ -1,12 +1,10 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
+# Example:
 metadata:
-  name: "mta-service-backstage"
+  name: mta-service-backstage
   annotations:
-    backstage.io/managed-by-location: url:https://github.com/rgolangh/mta-service-backstage/edit/master/catalog-info.yaml
-    janus-idp.io/workflows/id: bar
-    janus-idp.io/tekton-enabled : 'true'
-    janus-idp.io/workflows-enabled : 'true'
+    backstage.io/managed-by-location: url:http://github.com/backstage/backstage/blob/master/catalog-info.yaml
     
 spec:
   type: service
